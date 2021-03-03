@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>frequency_result</title>
+</head>
+<body>
+    <h1>당신이 입력한 텍스트의 단어 수는 {{length}} 입니다.</h1>
+    <a href="{% url 'home' %}">다시하기</a>
+    <h1>입력한 텍스트</h1>
+    <p>{{text}}</p>
+    <h1>단어 카운트</h1>
+    {% for word, howmany in dict %}
+    <div>{{word}} : {{howmany}}개</div>
+    {% endfor %}
+</body>
+</html>
